@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import ElementUI from 'element-ui'
 import Home from '../views/Home.vue'
 
+import 'element-ui/lib/theme-chalk/index.css'
+
 Vue.use(VueRouter)
+Vue.use(ElementUI)
 
 const routes = [
   {

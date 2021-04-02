@@ -1,18 +1,16 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  div.process-editor
+    process-editor
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ProcessEditor from '@/components/ProcessEditor'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    ProcessEditor
   }
 }
 </script>
