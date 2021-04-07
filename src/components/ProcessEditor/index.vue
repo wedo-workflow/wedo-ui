@@ -1,10 +1,12 @@
 <template lang="pug">
   div.process-editor
     div#editor(ref="editor")
+    panel.right-panel(:bpmn-modeler="bpmnModeler")
 </template>
 
 <script>
 import BpmnModeler from 'bpmn-js/lib/Modeler'
+import Panel from './Panel'
 import diagramXML from './resources/newDiagram.bpmn'
 
 import 'bpmn-js/dist/assets/diagram-js.css'
@@ -21,6 +23,9 @@ export default {
   },
   props: {
     msg: String
+  },
+  components: {
+    Panel
   },
   methods: {
     initBpmnModeler () {
@@ -42,8 +47,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.process-editor {
+  display: flex;
+}
 #editor {
-  width: 100vw;
+  width: calc(100vw - 300px);
   height: 100vh;
+}
+.right-panel {
+  height: 100vh;
+  width: 300px;
 }
 </style>
